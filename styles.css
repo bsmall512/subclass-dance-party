@@ -25,3 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.bluesCluesDancer{
+  border:30px ;
+  border-radius:30px;
+  position:absolute;
+  background-image: "MacintoshHD/Users/student/MKS14-subclass-dance-party/src/bluesclues.gif";
+}
