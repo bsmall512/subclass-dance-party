@@ -34,20 +34,19 @@
 
 var Dancer = function (top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
-  this.setPosition(top, left);
+  this._timeBetweenSteps = timeBetweenSteps;
   //timebetween steps and .step method
   this.step();
-  this._timeBetweenSteps = timeBetweenSteps;
+  this.setPosition(top, left);
   }
 
 Dancer.prototype.step = function () {
   // setTimeout(this.step.bind(this), this._timeBetweenSteps);
-  var that = this;
-  setTimeout(function(){that.step();}, this._timeBetweenSteps);
+  setTimeout(this.step.bind(this), this._timeBetweenSteps);
 } // possibly an IIFE?
 
 Dancer.prototype.setPosition = function (top, left) {
-  
+ 
   var styleSettings = {
     "top": top,
     "left": left

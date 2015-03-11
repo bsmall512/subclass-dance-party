@@ -29,6 +29,7 @@ BlinkyDancer.prototype.constructor = BlinkyDancer;
 BlinkyDancer.prototype.step = function (){
   // debugger;
   // setInterval(this.$node.toggle, timeBetweenSteps);
-  this.$node.toggle();
   Dancer.prototype.step.call(this);
+  this.$node.toggle();
 }
+
